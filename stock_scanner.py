@@ -30,7 +30,7 @@ class Page(PyQt5.QtWebEngineWidgets.QWebEnginePage):
 
 
 @app.route('/')
-def get_my_ip():
+def scrapper():
     page = Page('https://chartink.com/screener/profit-jump-by-200')
     soup = bs(page.html, 'html.parser')
     js_test = soup.find('table', class_='table table-striped scan_results_table dataTable no-footer')
